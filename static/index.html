@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sof-IA, my Evaluator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>🤖 Sof-IA, my Evaluator</h1>
+                <p class="subtitle">Interaja com a avaliadora oficial AI-102</p>
+            </div>
+            <div class="header-status">
+                <span id="status-indicator" class="status-dot"></span>
+                <span id="status-text">Conectando...</span>
+            </div>
+        </header>
+
+        <main class="chat-container">
+            <div id="messages" class="messages-list">
+                <div class="welcome-message">
+                    <h2>Bem-vindo! 👋</h2>
+                    <p>Você está conectado à Sof-IA, my Evaluator. Faça suas perguntas sobre AI-102 e obtenha respostas especializadas.</p>
+                    <div class="suggestions">
+                        <button class="suggestion-btn" onclick="sendMessage('Oi, Sof-IA!')">Oi, Sof-IA!</button>
+                        <button class="suggestion-btn" onclick="sendMessage('Qual é a sua função?')">Qual é a sua função?</button>
+                        <button class="suggestion-btn" onclick="sendMessage('Me ajude com um problema de AI-102')">Me ajude com um problema de AI-102</button>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="input-footer">
+                <form id="chat-form" onsubmit="handleSubmit(event)">
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="message-input" 
+                            placeholder="Digite sua mensagem aqui..." 
+                            autocomplete="off"
+                            disabled
+                        >
+                        <button 
+                            type="submit" 
+                            id="send-button" 
+                            class="send-button"
+                            disabled
+                        >
+                            <span>Enviar</span>
+                            <span class="send-icon">→</span>
+                        </button>
+                    </div>
+                </form>
+            </footer>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
